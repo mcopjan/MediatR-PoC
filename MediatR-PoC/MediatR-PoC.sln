@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipesServer", "NamedPi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipeClientTests", "NamedPipeClientTests\NamedPipeClientTests.csproj", "{CAB74818-AEF5-4C03-8B58-F9978BBAC138}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRModel", "MediatRModel\MediatRModel.csproj", "{4409AC56-D608-4E3F-86E5-3010EBB2BF49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CAB74818-AEF5-4C03-8B58-F9978BBAC138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB74818-AEF5-4C03-8B58-F9978BBAC138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB74818-AEF5-4C03-8B58-F9978BBAC138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4409AC56-D608-4E3F-86E5-3010EBB2BF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4409AC56-D608-4E3F-86E5-3010EBB2BF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4409AC56-D608-4E3F-86E5-3010EBB2BF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4409AC56-D608-4E3F-86E5-3010EBB2BF49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
