@@ -12,7 +12,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MediatRModel\MediatRModel.csproj" />
+	  <ProjectReference Include="..\Module1\Module1.csproj" />
+	  <ProjectReference Include="..\Module2\Module2.csproj" />
 	</ItemGroup>
 
 </Project>

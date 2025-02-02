@@ -1,12 +1,7 @@
 ﻿using MediatR;
 using MediatRModel;
-using System;
-using System.Collections.Generic;
 using System.IO.Pipes;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace NamedPipesServer
 {
@@ -55,14 +50,13 @@ namespace NamedPipesServer
                                     Console.WriteLine("Client requested exit");
                                     break;
                                 }
+                                var notification = new TestNotification() { Message = clientMessage };
+                                var mediatRResponse = _mediator.Publish(notification);
+                                var results = notification.Responses;
+                                string jsonServerResponse = JsonSerializer.Serialize(results);
+                                Console.WriteLine($"Client message '{clientMessage}' was processed by modules and this is the response: {jsonServerResponse}");
 
-                                var mediatRResponse = _mediator.Send(new MediatRCommand() { Data = clientMessage });
-                                Console.WriteLine($"Client: {clientMessage}");
-                                Console.WriteLine($"Mediatr response: {mediatRResponse.Result.Result}");
-
-                                //example of processing a message and returing back to the client
-                                string serverResponse = clientMessage.ToUpper();
-                                await writer.WriteLineAsync(serverResponse);
+                                await writer.WriteLineAsync(jsonServerResponse);
                                 await writer.FlushAsync();
                             }
                         }
